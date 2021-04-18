@@ -1,9 +1,9 @@
+import { useCanvasContext } from '@components/Canvas/hooks'
 import { createRef, useCallback, useEffect } from 'react'
-import useCanvas from '../hooks/useCanvas'
 
 function useContainerHandler() {
   const containerRef = createRef<HTMLDivElement>()
-  const canvas = useCanvas()
+  const { canvas } = useCanvasContext()
   const updateCanvasSize = useCallback(
     (x, y) => {
       if (canvas) {
@@ -22,6 +22,7 @@ function useContainerHandler() {
     const containerWidth = containerRef.current.clientWidth
     const containerHeight = containerRef.current.clientHeight
     updateCanvasSize(containerWidth, containerHeight)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvas])
 
   useEffect(() => {

@@ -1,6 +1,11 @@
 // @ts-nocheck
 import { fabric } from 'fabric'
-import { drawCircleIcon, drawVerticalLineIcon, drawHorizontalLineIcon, drawRotateIcon } from '../utils/drawer'
+import {
+  drawCircleIcon,
+  drawVerticalLineIcon,
+  drawHorizontalLineIcon,
+  drawRotateIcon,
+} from '@components/Canvas/utils'
 
 fabric.Object.prototype.transparentCorners = false
 fabric.Object.prototype.cornerColor = '#20bf6b'

@@ -1,5 +1,5 @@
-import { sampleData } from '../../constants/sample'
-import useCoreHandler from '../../handlers/useCoreHandler'
+import { sampleData } from '@components/Canvas/constants/sample'
+import { useCoreHandler } from '@components/Canvas/hooks'
 
 function Navbar() {
   const { exportJSON, loadJSON } = useCoreHandler()

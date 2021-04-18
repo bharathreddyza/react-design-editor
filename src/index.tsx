@@ -1,14 +1,13 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import { InstanceProvider } from '@backium/use-instance'
+import { CanvasProvider } from '@components/Canvas'
+import './index.css'
 
 ReactDOM.render(
-  <InstanceProvider>
+  <CanvasProvider>
     <App />
-  </InstanceProvider>,
+  </CanvasProvider>,
   document.getElementById('root')
 )
 
