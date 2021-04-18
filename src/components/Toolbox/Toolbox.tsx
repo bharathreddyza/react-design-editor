@@ -1,5 +1,5 @@
 function Toolbox() {
-  return <div className="editor-toolbox"></div>;
+  return <div className="editor-toolbox"></div>
 }
 
-export default Toolbox;
+export default Toolbox

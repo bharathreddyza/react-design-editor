@@ -4,7 +4,7 @@ function Sidebar() {
       <div className="panelItems">Hi</div>
       <div className="panelItem">there</div>
     </div>
-  );
+  )
 }
 
-export default Sidebar;
+export default Sidebar

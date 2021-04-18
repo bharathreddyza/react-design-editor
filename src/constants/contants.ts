@@ -1,1 +1,1 @@
-export const propertiesToInclude = ['id', 'selectable'];
+export const propertiesToInclude = ['id', 'selectable']

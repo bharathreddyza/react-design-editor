@@ -1,33 +1,33 @@
-import { useCallback, useEffect } from 'react';
-import { propertiesToInclude } from '../constants/contants';
-import { sampleData } from '../constants/sample';
-import useCanvas from '../hooks/useCanvas';
+import { useCallback, useEffect } from 'react'
+import { propertiesToInclude } from '../constants/contants'
+import { sampleData } from '../constants/sample'
+import useCanvas from '../hooks/useCanvas'
 
 function useCoreHandler() {
-  const canvas = useCanvas();
+  const canvas = useCanvas()
 
   const exportJSON = useCallback(() => {
-    const json = canvas.toJSON(propertiesToInclude);
-    return json;
-  }, [canvas]);
+    const json = canvas.toJSON(propertiesToInclude)
+    return json
+  }, [canvas])
 
   const loadJSON = useCallback(
-    json => {
+    (json) => {
       if (canvas) {
         canvas.loadFromJSON(json, () => {
-          canvas.requestRenderAll();
-        });
+          canvas.requestRenderAll()
+        })
       }
     },
     [canvas]
-  );
+  )
   useEffect(() => {
     if (canvas) {
-      loadJSON(sampleData);
+      loadJSON(sampleData)
     }
-  }, [canvas]);
+  }, [canvas])
 
-  return { exportJSON, loadJSON };
+  return { exportJSON, loadJSON }
 }
 
-export default useCoreHandler;
+export default useCoreHandler

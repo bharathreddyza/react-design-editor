@@ -1,37 +1,37 @@
-import { useCallback, useEffect } from 'react';
-import useCanvas from '../hooks/useCanvas';
+import { useCallback, useEffect } from 'react'
+import useCanvas from '../hooks/useCanvas'
 
 function useEventsHandler() {
-  const canvas = useCanvas();
+  const canvas = useCanvas()
   const onMouseWheel = useCallback(
-    event => {
+    (event) => {
       if (canvas && event.e.ctrlKey) {
-        const delta = event.e.deltaY;
-        let zoomRatio = canvas.getZoom();
+        const delta = event.e.deltaY
+        let zoomRatio = canvas.getZoom()
         if (delta > 0) {
-          zoomRatio -= 0.04;
+          zoomRatio -= 0.04
         } else {
-          zoomRatio += 0.04;
+          zoomRatio += 0.04
         }
         // @ts-ignore
-        canvas.zoomToPoint({ x: event.e.offsetX, y: event.e.offsetY }, zoomRatio);
+        canvas.zoomToPoint({ x: event.e.offsetX, y: event.e.offsetY }, zoomRatio)
       }
-      event.e.preventDefault();
-      event.e.stopPropagation();
+      event.e.preventDefault()
+      event.e.stopPropagation()
     },
     [canvas]
-  );
+  )
 
   useEffect(() => {
     if (canvas) {
-      canvas.on('mouse:wheel', onMouseWheel);
+      canvas.on('mouse:wheel', onMouseWheel)
     }
     return () => {
       if (canvas) {
-        canvas.off('mouse:wheel', onMouseWheel);
+        canvas.off('mouse:wheel', onMouseWheel)
       }
-    };
-  }, [canvas]);
+    }
+  }, [canvas])
 }
 
-export default useEventsHandler;
+export default useEventsHandler
