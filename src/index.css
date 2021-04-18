@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(244, 245, 246);
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  background: linear-gradient(90deg, #00c4cc, #7d2ae8);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.editor-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  background: blueviolet;
+  width: 430px;
+  flex: none;
+  display: flex;
+}
+
+.panelItem {
+  background: #293039;
+  flex: 1;
+}
+.panelItems {
+  background: #0e1318;
+  width: 70px;
+}
+.editor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-toolbox {
+  height: 54px;
+  background: #ffffff;
+  width: 100%;
+  border-bottom: 1px solid rgba(57, 76, 96, 0.15);
+}
+
+.editor-canvas {
+  flex: 1;
+}
+
+.button {
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.4rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.button:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
