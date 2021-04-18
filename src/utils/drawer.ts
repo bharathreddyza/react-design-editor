@@ -55,16 +55,16 @@ export function drawRotateIcon(ctx, left, top, styleOverride, fabricObject) {
   let arrowWidth = radius / 2
   const center = {
     x: left,
-    y: top,
+    y: top
   }
   let arrow1 = {
     startAngle: (1 / 2) * Math.PI + 0.6,
-    endAngle: (3 / 2) * Math.PI,
+    endAngle: (3 / 2) * Math.PI
   }
 
   let arrow2 = {
     startAngle: (3 / 2) * Math.PI + 0.6,
-    endAngle: (1 / 2) * Math.PI,
+    endAngle: (1 / 2) * Math.PI
   }
   function draw(startAngle, endAngle) {
     ctx.beginPath()

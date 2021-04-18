@@ -10,7 +10,7 @@ function useContainerHandler() {
         canvas.setHeight(y).setWidth(x)
         canvas.renderAll()
         // @ts-ignore
-        const workarea = canvas.getObjects().find((obj) => obj.id === 'workarea')
+        const workarea = canvas.getObjects().find(obj => obj.id === 'workarea')
         if (workarea) {
           workarea.center()
         }

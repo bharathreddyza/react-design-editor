@@ -4,7 +4,7 @@ import useCanvas from '../hooks/useCanvas'
 function useEventsHandler() {
   const canvas = useCanvas()
   const onMouseWheel = useCallback(
-    (event) => {
+    event => {
       if (canvas && event.e.ctrlKey) {
         const delta = event.e.deltaY
         let zoomRatio = canvas.getZoom()

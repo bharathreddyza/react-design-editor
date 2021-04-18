@@ -12,7 +12,7 @@ function useCoreHandler() {
   }, [canvas])
 
   const loadJSON = useCallback(
-    (json) => {
+    json => {
       if (canvas) {
         canvas.loadFromJSON(json, () => {
           canvas.requestRenderAll()
