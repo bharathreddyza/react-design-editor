@@ -1,19 +1,19 @@
-import { useInstance } from '@backium/use-instance';
-import { fabric } from 'fabric';
-import { useEffect, useState } from 'react';
+import { useInstance } from '@backium/use-instance'
+import { fabric } from 'fabric'
+import { useEffect, useState } from 'react'
 
 function useCanvas() {
-  const [canvas, setCanvas] = useState<fabric.Canvas>();
-  const { instances, getInstance } = useInstance();
+  const [canvas, setCanvas] = useState<fabric.Canvas>()
+  const { instances, getInstance } = useInstance()
 
   useEffect(() => {
-    const canvasInstance = getInstance<fabric.Canvas>('canvas');
+    const canvasInstance = getInstance<fabric.Canvas>('canvas')
     if (canvasInstance) {
-      setCanvas(canvasInstance);
+      setCanvas(canvasInstance)
     }
-  }, [instances, canvas]);
+  }, [instances, canvas])
 
-  return canvas;
+  return canvas
 }
 
-export default useCanvas;
+export default useCanvas

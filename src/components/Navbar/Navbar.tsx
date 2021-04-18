@@ -1,26 +1,26 @@
-import { sampleData } from '../constants/sample';
-import useCoreHandler from '../handlers/useCoreHandler';
+import { sampleData } from '../../constants/sample'
+import useCoreHandler from '../../handlers/useCoreHandler'
 
 function Navbar() {
-  const { exportJSON, loadJSON } = useCoreHandler();
+  const { exportJSON, loadJSON } = useCoreHandler()
 
   const exportToJSON = async () => {
-    const jsonData = exportJSON();
-    const fileName = 'file';
-    const json = JSON.stringify(jsonData);
-    const blob = new Blob([json], { type: 'application/json' });
-    const href = await URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = href;
-    link.download = fileName + '.json';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+    const jsonData = exportJSON()
+    const fileName = 'file'
+    const json = JSON.stringify(jsonData)
+    const blob = new Blob([json], { type: 'application/json' })
+    const href = await URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = href
+    link.download = fileName + '.json'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   const loadFromJSON = () => {
-    loadJSON(sampleData);
-  };
+    loadJSON(sampleData)
+  }
   return (
     <div className="navbar">
       <div onClick={loadFromJSON} className="button">
@@ -41,7 +41,7 @@ function Navbar() {
         </svg>
       </div>
     </div>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
