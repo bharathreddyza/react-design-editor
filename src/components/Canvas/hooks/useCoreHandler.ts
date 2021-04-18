@@ -1,10 +1,10 @@
+import { useCanvasContext } from '@components/Canvas/hooks'
 import { useCallback, useEffect } from 'react'
 import { propertiesToInclude } from '../constants/contants'
 import { sampleData } from '../constants/sample'
-import useCanvas from '../hooks/useCanvas'
 
 function useCoreHandler() {
-  const canvas = useCanvas()
+  const { canvas } = useCanvasContext()
 
   const exportJSON = useCallback(() => {
     const json = canvas.toJSON(propertiesToInclude)
@@ -25,6 +25,7 @@ function useCoreHandler() {
     if (canvas) {
       loadJSON(sampleData)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvas])
 
   return { exportJSON, loadJSON }

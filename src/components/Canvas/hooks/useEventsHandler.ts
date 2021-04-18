@@ -1,8 +1,8 @@
+import { useCanvasContext } from '@components/Canvas/hooks'
 import { useCallback, useEffect } from 'react'
-import useCanvas from '../hooks/useCanvas'
 
 function useEventsHandler() {
-  const canvas = useCanvas()
+  const { canvas } = useCanvasContext()
   const onMouseWheel = useCallback(
     event => {
       if (canvas && event.e.ctrlKey) {
@@ -31,6 +31,7 @@ function useEventsHandler() {
         canvas.off('mouse:wheel', onMouseWheel)
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvas])
 }
 

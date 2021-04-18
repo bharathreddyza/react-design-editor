@@ -1,31 +1,9 @@
-//@ts-check
-import { useInstance } from '@backium/use-instance'
-import { useEffect } from 'react'
-import useFabricSettings from './hooks/useFabricSettings'
-import Navbar from './components/Navbar/Navbar'
-import Sidebar from './components/Sidebar/Sidebar'
-import Toolbox from './components/Toolbox/Toolbox'
-import { fabric } from 'fabric'
-import useContainerHandler from './handlers/useContainerHandler'
-import useEventsHandler from './handlers/useEventsHandler'
+import Navbar from '@components/Navbar/Navbar'
+import Sidebar from '@components/Sidebar/Sidebar'
+import Toolbox from '@components/Toolbox/Toolbox'
+import Canvas from '@components/Canvas'
 
 function App() {
-  const { setInstance } = useInstance()
-  const containerRef = useContainerHandler()
-  useFabricSettings()
-  useEventsHandler()
-
-  useEffect(() => {
-    const initialHeigh = containerRef.current.clientHeight
-    const initialWidth = containerRef.current.clientWidth
-    const canvasInstance = new fabric.Canvas('canvas', {
-      backgroundColor: '#ecf0f1',
-      height: initialHeigh,
-      width: initialWidth,
-    })
-    setInstance('canvas', canvasInstance)
-  }, [])
-
   return (
     <div className="container">
       <Navbar />
@@ -33,9 +11,7 @@ function App() {
         <Sidebar />
         <div className="editor">
           <Toolbox />
-          <div className="editor-canvas" ref={containerRef}>
-            <canvas id="canvas"></canvas>
-          </div>
+          <Canvas />
         </div>
       </div>
     </div>
