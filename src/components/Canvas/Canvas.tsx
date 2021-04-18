@@ -4,6 +4,7 @@ import {
   useContainerHandler,
   useFabricSettings,
   useEventsHandler,
+  useZoomHandler,
 } from '@components/Canvas/hooks'
 import { fabric } from 'fabric'
 
@@ -12,6 +13,7 @@ function Canvas() {
   const { setCanvas } = useCanvasContext()
   useFabricSettings()
   useEventsHandler()
+  useZoomHandler()
   useEffect(() => {
     const initialHeigh = containerRef.current.clientHeight
     const initialWidth = containerRef.current.clientWidth
