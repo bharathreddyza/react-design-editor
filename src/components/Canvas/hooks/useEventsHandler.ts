@@ -2,7 +2,7 @@ import { useCanvasContext } from '@components/Canvas/hooks'
 import { useCallback, useEffect } from 'react'
 
 function useEventsHandler() {
-  const { canvas } = useCanvasContext()
+  const { canvas, setZoomRatio } = useCanvasContext()
   const onMouseWheel = useCallback(
     event => {
       if (canvas && event.e.ctrlKey) {
@@ -13,8 +13,7 @@ function useEventsHandler() {
         } else {
           zoomRatio += 0.04
         }
-        // @ts-ignore
-        canvas.zoomToPoint({ x: event.e.offsetX, y: event.e.offsetY }, zoomRatio)
+        setZoomRatio(zoomRatio)
       }
       event.e.preventDefault()
       event.e.stopPropagation()
