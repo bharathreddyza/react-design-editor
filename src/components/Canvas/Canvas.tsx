@@ -1,17 +1,17 @@
 import { useEffect } from 'react'
+import { useCanvasContext } from '@components/Canvas/hooks'
+import { fabric } from 'fabric'
 import {
-  useCanvasContext,
-  useContainerHandler,
-  useFabricSettings,
+  useCustomizationHandler,
   useEventsHandler,
   useZoomHandler,
-} from '@components/Canvas/hooks'
-import { fabric } from 'fabric'
+  useContainerHandler,
+} from '@components/Canvas/handlers'
 
 function Canvas() {
   const containerRef = useContainerHandler()
   const { setCanvas } = useCanvasContext()
-  useFabricSettings()
+  useCustomizationHandler()
   useEventsHandler()
   useZoomHandler()
   useEffect(() => {

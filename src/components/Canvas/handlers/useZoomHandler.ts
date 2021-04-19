@@ -1,6 +1,6 @@
 import { fabric } from 'fabric'
 import { useCallback, useEffect } from 'react'
-import useCanvasContext from './useCanvasContext'
+import { useCanvasContext } from '@components/Canvas/hooks'
 
 function useZoomHandler() {
   const { canvas, zoomRatio } = useCanvasContext()
