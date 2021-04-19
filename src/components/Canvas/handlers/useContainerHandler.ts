@@ -25,34 +25,6 @@ function useContainerHandler() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvas])
 
-  useEffect(() => {
-    if (canvas) {
-      canvas.selectionColor = 'rgba(46, 204, 113, 0.15)'
-      canvas.selectionBorderColor = 'rgb(39, 174, 96)'
-      canvas.selectionLineWidth = 0.4
-    }
-  }, [canvas])
-
-  useEffect(() => {
-    if (canvas) {
-      canvas.on('selection:created', function (ev) {
-        //  ev.target.borderOpacityWhenMoving = 0;
-
-        const objects = canvas.getActiveObjects()
-        if (objects.length > 1) {
-          ev.target.setControlsVisibility({
-            mt: false,
-            mb: false,
-            mr: false,
-            ml: false,
-          })
-          ev.target.borderDashArray = [7]
-        }
-      })
-    }
-  }, [canvas])
-
-  //useEffect(())
   return containerRef
 }
 

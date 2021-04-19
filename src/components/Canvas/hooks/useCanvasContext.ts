@@ -7,9 +7,7 @@ function useCanvasContext() {
     zoomRatio,
     setZoomRatio,
     setCanvas,
-
     canvas,
-
     activeObject,
     setActiveObject,
   }

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { FC, createContext, useState } from 'react'
 import { fabric } from 'fabric'
 
 interface CanvasContext {
@@ -10,7 +10,7 @@ interface CanvasContext {
   setActiveObject: (object: fabric.Object | null) => void
 }
 
-export const Context = React.createContext<CanvasContext>({
+export const Context = createContext<CanvasContext>({
   zoomRatio: 1,
   setZoomRatio: () => {},
   canvas: null,
@@ -19,10 +19,10 @@ export const Context = React.createContext<CanvasContext>({
   setActiveObject: () => {},
 })
 
-export const CanvasProvider: React.FC = ({ children }) => {
-  const [canvas, setCanvas] = React.useState<fabric.Canvas | null>(null)
-  const [activeObject, setActiveObject] = React.useState<fabric.Object | null>(null)
-  const [zoomRatio, setZoomRatio] = React.useState(1)
+export const CanvasProvider: FC = ({ children }) => {
+  const [canvas, setCanvas] = useState<fabric.Canvas | null>(null)
+  const [activeObject, setActiveObject] = useState<fabric.Object | null>(null)
+  const [zoomRatio, setZoomRatio] = useState(1)
   const context = { canvas, setCanvas, activeObject, setActiveObject, zoomRatio, setZoomRatio }
 
   return <Context.Provider value={context}>{children}</Context.Provider>
