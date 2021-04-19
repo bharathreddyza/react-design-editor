@@ -6,12 +6,14 @@ import {
   useEventsHandler,
   useZoomHandler,
   useContainerHandler,
+  useGuidelinesHandler,
 } from '@components/Canvas/handlers'
 
 function Canvas() {
   const containerRef = useContainerHandler()
   const { setCanvas } = useCanvasContext()
   useCustomizationHandler()
+  useGuidelinesHandler()
   useEventsHandler()
   useZoomHandler()
   useEffect(() => {
