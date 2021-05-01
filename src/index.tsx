@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom'
-import App from './App'
+import { Editor } from '@scenes/Editor'
 import reportWebVitals from './reportWebVitals'
 import { CanvasProvider } from '@components/Canvas'
 import './index.css'
 
 ReactDOM.render(
   <CanvasProvider>
-    <App />
+    <Editor />
   </CanvasProvider>,
   document.getElementById('root')
 )

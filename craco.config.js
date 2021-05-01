@@ -8,7 +8,7 @@ module.exports = {
       '@': resloveSrc(),
       '@assets': resloveSrc('assets'),
       '@components': resloveSrc('components'),
-      '@pages': resloveSrc('pages'),
+      '@scenes': resloveSrc('scenes'),
       '@store': resloveSrc('store'),
       '@services': resloveSrc('services'),
       '@utils': resloveSrc('utils'),

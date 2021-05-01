@@ -1,0 +1,11 @@
+.editor-color-holder {
+  height: 30px;
+  width: 30px;
+}
+
+.vertical-separator {
+  background: rgba(57, 76, 96, 0.15);
+  width: 1px;
+  height: 30px;
+  margin: 0 12px;
+}

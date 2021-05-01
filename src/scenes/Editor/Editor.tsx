@@ -1,6 +1,6 @@
 import Navbar from '@components/Navbar/Navbar'
-import Sidebar from '@components/Sidebar/Sidebar'
-import Toolbox from '@components/Toolbox/Toolbox'
+import Sidebar from '@scenes/Editor/Sidebar/Sidebar'
+import Toolbox from '@scenes/Editor/Toolbox/Toolbox'
 import Canvas from '@components/Canvas'
 
 function App() {

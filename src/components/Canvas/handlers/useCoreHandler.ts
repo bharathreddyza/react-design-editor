@@ -28,7 +28,19 @@ function useCoreHandler() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvas])
 
-  return { exportJSON, loadJSON }
+  const setCanvasBackgroundColor = useCallback(
+    color => {
+      // @ts-ignore
+      const workarea = canvas.getObjects().find(object => object.id === 'workarea')
+      if (workarea) {
+        workarea.set('fill', color)
+        canvas.requestRenderAll()
+      }
+    },
+    [canvas]
+  )
+
+  return { exportJSON, loadJSON, setCanvasBackgroundColor }
 }
 
 export default useCoreHandler
