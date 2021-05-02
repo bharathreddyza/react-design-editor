@@ -14,8 +14,13 @@ function TextPanel() {
       fontFamily: 'Lexend',
       textAlign: 'center',
     })
+    //@ts-ignore
+    const workarea = canvas.getObjects().find(obj => obj.id === 'workarea')
     canvas.add(text)
     text.center()
+
+    text.clipPath = workarea
+    canvas.renderAll()
   }
 
   const addSubheading = () => {
@@ -26,8 +31,13 @@ function TextPanel() {
       fontFamily: 'Lexend',
       textAlign: 'center',
     })
+    //@ts-ignore
+    const workarea = canvas.getObjects().find(obj => obj.id === 'workarea')
     canvas.add(text)
     text.center()
+
+    text.clipPath = workarea
+    canvas.renderAll()
   }
 
   const addTextBody = () => {
@@ -38,8 +48,13 @@ function TextPanel() {
       fontFamily: 'Lexend',
       textAlign: 'center',
     })
+    //@ts-ignore
+    const workarea = canvas.getObjects().find(obj => obj.id === 'workarea')
     canvas.add(text)
     text.center()
+
+    text.clipPath = workarea
+    canvas.renderAll()
   }
   return (
     <>
