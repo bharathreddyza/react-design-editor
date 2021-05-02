@@ -34,3 +34,45 @@
     background: rgba($color: #fff, $alpha: 0.1);
   }
 }
+
+// Panel Text
+.panel-text {
+  width: 360px;
+  color: #fff;
+  .add-text-items {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .label {
+    font-weight: 600;
+    padding: 0.8rem 0;
+    font-size: 0.84rem;
+  }
+  .add-text-item {
+    background: rgba($color: #fff, $alpha: 0.1);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    cursor: pointer;
+    transition: background 0.4s;
+    &:hover {
+      background: rgba($color: #fff, $alpha: 0.15);
+    }
+  }
+  .add-heading {
+    font-weight: 700;
+    font-size: 1.66rem;
+  }
+  .add-subheading {
+    background: rgba($color: #fff, $alpha: 0.1);
+    font-size: 1.12rem;
+    font-weight: 500;
+  }
+  .add-body-text {
+    background: rgba($color: #fff, $alpha: 0.1);
+    font-size: 0.76rem;
+    font-weight: 400;
+    color: rgba($color: #fff, $alpha: 0.9);
+  }
+}
