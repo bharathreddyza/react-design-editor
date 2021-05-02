@@ -3,27 +3,24 @@
   transition: width 0.5s;
   position: relative;
   overflow: hidden;
+  display: flex;
   &.open {
     width: 360px;
   }
 }
 .panel-item {
-  // background: red;
-  padding: 2rem;
+  flex: 1;
 }
 
-.import-button-container {
-  // display: flex;
-  align-items: center;
-  justify-content: center;
+.objects-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-auto-rows: minmax(100px, auto);
+  gap: 1rem;
+  padding: 1rem 0;
 }
-.import-button {
-  border: 2px solid rgba($color: #fff, $alpha: 0.4);
-  color: rgba($color: #fff, $alpha: 1);
-  border-radius: 20px;
-  padding: 0.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+
+.object-item {
+  // height: 6rem;
+  // background: rebeccapurple;
 }
