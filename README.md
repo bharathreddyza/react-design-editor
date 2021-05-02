@@ -31,6 +31,21 @@ yarn start
 
 Web application service will start running at `localhost:3000`
 
+## Integrations
+
+In order to provide rich content, the following integrations are implemented.
+
+### Iconscout
+
+Illusatrions and icons provider. Add credentials to `.env` file.
+
+```sh
+ICONSCOUT_CLIENT_ID="your-client-id"
+ICONSCOUT_SECRET="your-secret"
+```
+
+Currently, this values are being included in the repository. In the furure, you will require to add your own credentials.
+
 ## Contribution
 
 Feel free to contribute by opening issues with any questions, bug reports or feature requests.

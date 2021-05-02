@@ -7,14 +7,7 @@
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/fabric": "^4.2.5",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "craco": "^0.0.3",
     "fabric": "^4.4.0",
@@ -28,7 +21,7 @@
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
+    "use-debounce": "^6.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -57,7 +50,16 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/fabric": "^4.2.5",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
     "@types/react-color": "^3.0.4",
-    "prettier": "^2.2.1"
+    "@types/react-dom": "^17.0.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.2"
   }
 }
