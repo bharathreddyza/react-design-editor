@@ -1,0 +1,23 @@
+.editor {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: #ecf0f1;
+  flex: 1;
+}
+
+.section-two {
+  display: flex;
+  flex: 1;
+}
+
+.section-three {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-canvas {
+  flex: 1;
+}

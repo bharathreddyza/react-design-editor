@@ -1,0 +1,57 @@
+@import '../../../../theme/colors.scss';
+
+.panel-items-list {
+  width: 72px;
+  background: $dark-1;
+  color: #fff;
+}
+
+.panel-items-list-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 72px;
+  text-align: center;
+  font-size: 0.8rem;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: rgba($color: #ffffff, $alpha: 0.8);
+  &:hover {
+    color: rgba($color: #ffffff, $alpha: 1);
+  }
+  &.active {
+    background: $dark-2;
+    color: rgba($color: #ffffff, $alpha: 1);
+  }
+  span {
+    padding-top: 0.2rem;
+  }
+}
+
+.panel-items-list-item.active::before {
+  background: radial-gradient(circle closest-side, transparent 0, transparent 50%, $dark-2 0) 200% 200%/400%
+    400%;
+  top: -8px;
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 8px;
+  width: 8px;
+  overflow: hidden;
+}
+
+.panel-items-list-item.active::after {
+  border-right: none !important;
+  height: 100%;
+  top: 8px;
+  right: -1px;
+  transform: scaleY(-1);
+  background: radial-gradient(circle closest-side, transparent 0, transparent 50%, $dark-2 0) 200% 200%/400%
+    400%;
+  width: 8px;
+  overflow: hidden;
+  content: '';
+  position: absolute;
+}

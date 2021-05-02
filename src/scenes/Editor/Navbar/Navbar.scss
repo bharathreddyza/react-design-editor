@@ -1,0 +1,30 @@
+.navbar {
+  background: linear-gradient(90deg, #00c4cc, #7d2ae8);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.36rem;
+}
+
+.navbar-left {
+  color: #fff;
+  display: flex;
+  svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.navbar-action-items {
+  color: #fff;
+  display: flex;
+}
+
+.navbar-icon {
+  border-radius: 4px;
+  padding: 0.5rem;
+  background: rgba($color: #fff, $alpha: 0.15);
+  margin-left: 1rem;
+  cursor: pointer;
+}

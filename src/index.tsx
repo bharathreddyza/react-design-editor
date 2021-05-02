@@ -2,11 +2,16 @@ import ReactDOM from 'react-dom'
 import { Editor } from '@scenes/Editor'
 import reportWebVitals from './reportWebVitals'
 import { CanvasProvider } from '@components/Canvas'
+import { ChakraProvider } from '@chakra-ui/react'
+
+import './i18n/index'
 import './index.css'
 
 ReactDOM.render(
   <CanvasProvider>
-    <Editor />
+    <ChakraProvider>
+      <Editor />
+    </ChakraProvider>
   </CanvasProvider>,
   document.getElementById('root')
 )

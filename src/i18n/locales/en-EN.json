@@ -1,0 +1,20 @@
+{
+  "editor": {
+    "panel": {
+      "items": {
+        "formats": "Formats",
+        "templates": "Templates",
+        "images": "Images",
+        "text": "Text",
+        "documents": "Documents",
+        "objects": "Objects",
+        "musics": "Music",
+        "videos": "Videos",
+        "graphics": "Graphics",
+        "layers": "layers",
+        "folders": "Folders",
+        "help": "Help"
+      }
+    }
+  }
+}

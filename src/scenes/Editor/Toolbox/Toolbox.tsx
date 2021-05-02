@@ -44,7 +44,7 @@ function Toolbox() {
   return (
     <div className="editor-toolbox">
       <div style={{ position: 'relative' }}>
-        <div onClick={handleClick}>
+        <div style={{ cursor: 'pointer' }} onClick={handleClick}>
           {options.backgroundColor === '#ffffff' ? (
             <img style={{ height: '30px', display: 'flex' }} src={emptyColorPlaceholder} alt="color picker" />
           ) : (
