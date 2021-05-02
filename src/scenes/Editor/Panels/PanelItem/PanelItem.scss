@@ -16,11 +16,21 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   // grid-auto-rows: minmax(100px, auto);
-  gap: 1rem;
+  // gap: 1rem;
   padding: 1rem 0;
 }
 
 .object-item {
   // height: 6rem;
   // background: rebeccapurple;
+}
+
+.object-item-container {
+  // background: red;
+  transition: background 0.4s;
+  cursor: pointer;
+  padding: 1rem;
+  &:hover {
+    background: rgba($color: #fff, $alpha: 0.1);
+  }
 }

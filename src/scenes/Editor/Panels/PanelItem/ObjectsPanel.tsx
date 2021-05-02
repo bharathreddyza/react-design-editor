@@ -28,7 +28,7 @@ function ObjectsPanel() {
   const renderItems = () => {
     return objects.map(obj => {
       return (
-        <div onClick={() => downloadImage(obj.uuid)} key={obj.uuid}>
+        <div className="object-item-container" onClick={() => downloadImage(obj.uuid)} key={obj.uuid}>
           <img className="object-item" src={obj.urls.thumb} />
         </div>
       )
@@ -39,9 +39,12 @@ function ObjectsPanel() {
       .then(url => {
         fabric.loadSVGFromURL(url, (objects, options) => {
           const object = fabric.util.groupSVGElements(objects, options)
+          //@ts-ignore
+          const workarea = canvas.getObjects().find(obj => obj.id === 'workarea')
           canvas.add(object)
-          console.log(object)
-          canvas.calcOffset()
+          object.scaleToHeight(300)
+          object.center()
+          object.clipPath = workarea
           canvas.renderAll()
         })
       })

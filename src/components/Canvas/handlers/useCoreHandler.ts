@@ -1,7 +1,6 @@
 import { useCanvasContext } from '@components/Canvas/hooks'
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import { propertiesToInclude } from '../constants/contants'
-import { sampleData } from '../constants/sample'
 
 function useCoreHandler() {
   const { canvas } = useCanvasContext()
@@ -21,12 +20,6 @@ function useCoreHandler() {
     },
     [canvas]
   )
-  useEffect(() => {
-    if (canvas) {
-      loadJSON(sampleData)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [canvas])
 
   const setCanvasBackgroundColor = useCallback(
     color => {
