@@ -2,8 +2,8 @@ import { useState } from 'react'
 import ClosePanel from './ClosePanel'
 import PanelItemsList from './PanelItemsList/PanelItemsList'
 import PanelItem from './PanelItem/PanelItem'
-
 import './Panels.scss'
+
 function Panels() {
   const [panelOpen, setPanelOpen] = useState(true)
   const [activeTab, setActiveTab] = useState('text')
@@ -19,7 +19,7 @@ function Panels() {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
-      <PanelItem panelOpen={panelOpen} />
+      <PanelItem activeTab={activeTab} panelOpen={panelOpen} />
       <ClosePanel closePanel={closePanel} />
     </div>
   )

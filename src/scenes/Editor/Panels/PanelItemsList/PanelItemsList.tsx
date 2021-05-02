@@ -1,8 +1,7 @@
 import { Scrollbars } from 'react-custom-scrollbars'
-import { tabItems } from '@/constants'
+import { tabItems } from './tabItems'
 import PanelItemsListItem from './PanelItemsListItem'
 import i18n from 'i18next'
-
 import './PanelItemsList.scss'
 
 interface Props {
