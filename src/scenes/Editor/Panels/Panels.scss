@@ -1,0 +1,43 @@
+@import '../../../theme/colors.scss';
+
+.panels {
+  position: relative;
+  background: $dark-2;
+  box-shadow: 5px 0 5px -5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  user-select: none;
+  font-family: 'Karla';
+}
+
+.panel-item-close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  z-index: 2;
+}
+
+.c1 {
+  margin-left: -6px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  overflow: hidden;
+  pointer-events: none;
+  position: relative;
+  color: #fff;
+  right: -5px;
+}
+
+.c2 {
+  margin-left: -6px;
+  border: none;
+  right: 8px;
+  position: relative;
+  justify-content: center;
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  transform: translate(100%, -50%);
+}

@@ -1,0 +1,29 @@
+.panel-item-container {
+  width: 0;
+  transition: width 0.5s;
+  position: relative;
+  overflow: hidden;
+  &.open {
+    width: 360px;
+  }
+}
+.panel-item {
+  // background: red;
+  padding: 2rem;
+}
+
+.import-button-container {
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.import-button {
+  border: 2px solid rgba($color: #fff, $alpha: 0.4);
+  color: rgba($color: #fff, $alpha: 1);
+  border-radius: 20px;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

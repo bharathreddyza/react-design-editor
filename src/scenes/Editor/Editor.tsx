@@ -1,21 +1,24 @@
-import Navbar from '@components/Navbar/Navbar'
-import Sidebar from '@scenes/Editor/Sidebar/Sidebar'
+import Navbar from '@scenes/Editor/Navbar/Navbar'
+import Panels from '@scenes/Editor/Panels/Panels'
+import FooterMenu from '@scenes/Editor/FooterMenu/FooterMenu'
 import Toolbox from '@scenes/Editor/Toolbox/Toolbox'
-import Canvas from '@components/Canvas'
+import CanvasArea from '@scenes/Editor/CanvasArea/CanvasArea'
+import './Editor.scss'
 
-function App() {
+function Editor() {
   return (
-    <div className="container">
+    <div className="editor">
       <Navbar />
-      <div className="editor-content">
-        <Sidebar />
-        <div className="editor">
+      <div className="section-two">
+        <Panels />
+        <div className="section-three">
           <Toolbox />
-          <Canvas />
+          <CanvasArea />
+          <FooterMenu />
         </div>
       </div>
     </div>
   )
 }
 
-export default App
+export default Editor

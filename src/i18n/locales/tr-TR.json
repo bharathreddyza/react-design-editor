@@ -1,0 +1,20 @@
+{
+  "editor": {
+    "panel": {
+      "items": {
+        "formats": "Formatlar",
+        "templates": "Şablonlar",
+        "images": "Fotoğraf",
+        "text": "Metin",
+        "documents": "Doküman",
+        "objects": "Nesneler",
+        "musics": "Müzik",
+        "videos": "Videolar",
+        "graphics": "Grafikler",
+        "layers": "Katmanlar",
+        "folders": "Dosyalarım",
+        "help": "Yardım"
+      }
+    }
+  }
+}
