@@ -17,7 +17,7 @@ function PanelItem({ panelOpen, activeTab }: Props) {
     'panel-item-container': true,
     open: panelOpen,
   })
-  console.log({ activeTab })
+
   return (
     <div className={className}>
       <div className="panel-item">

@@ -19,14 +19,26 @@ function Canvas() {
   useEffect(() => {
     const initialHeigh = containerRef.current.clientHeight
     const initialWidth = containerRef.current.clientWidth
-    setCanvas(
-      new fabric.Canvas('canvas', {
-        backgroundColor: '#ecf0f1',
-        height: initialHeigh,
-        width: initialWidth,
-      })
-    )
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    const canvas = new fabric.Canvas('canvas', {
+      backgroundColor: '#ecf0f1',
+      height: initialHeigh,
+      width: initialWidth,
+    })
+
+    setCanvas(canvas)
+    const workarea = new fabric.Rect({
+      //@ts-ignore
+      id: 'workarea',
+      width: 600,
+      height: 400,
+      absolutePositioned: true,
+      fill: '#ffffff',
+      selectable: false,
+      hoverCursor: 'default',
+    })
+    canvas.add(workarea)
+    workarea.center()
   }, [])
   return (
     <div className="editor-canvas" ref={containerRef}>
