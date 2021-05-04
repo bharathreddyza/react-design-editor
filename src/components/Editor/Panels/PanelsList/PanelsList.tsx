@@ -1,8 +1,9 @@
 import { Scrollbars } from 'react-custom-scrollbars'
 import { tabItems } from './tabItems'
-import PanelItemsListItem from './PanelItemsListItem'
+import PanelItemsListItem from './PanelsListItem'
 import i18n from 'i18next'
-import './PanelItemsList.scss'
+
+import './PanelsList.scss'
 
 interface Props {
   setActiveTab: React.Dispatch<React.SetStateAction<string>>

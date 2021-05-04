@@ -2,8 +2,8 @@ import { useCoreHandler } from '@/components/Canvas/handlers'
 import { CSSProperties, useState } from 'react'
 import { TwitterPicker } from 'react-color'
 import emptyColorPlaceholder from '@/assets/images/base-color-picker.png'
-
-import './Toolbox.css'
+import './DefaultToobox.scss'
+// import './Toolbox.css'
 
 function VerticalSeparator() {
   return <div className="vertical-separator"></div>
@@ -42,24 +42,30 @@ function Toolbox() {
     setOptions({ ...options, backgroundColor: color.hex })
   }
   return (
-    <div className="editor-toolbox">
-      <div style={{ position: 'relative' }}>
-        <div style={{ cursor: 'pointer' }} onClick={handleClick}>
-          {options.backgroundColor === '#ffffff' ? (
-            <img style={{ height: '30px', display: 'flex' }} src={emptyColorPlaceholder} alt="color picker" />
-          ) : (
-            <div style={{ background: options.backgroundColor }} className="editor-color-holder" />
-          )}
-        </div>
-
-        {dropdown.displayColorPicker ? (
-          <div style={popover}>
-            <div style={cover} onClick={handleClose} />
-            <TwitterPicker color={options.backgroundColor} onChange={onColorChange} />
+    <div className="editor-toolbox-container">
+      <div className="editor-toolbox default">
+        <div style={{ position: 'relative' }}>
+          <div style={{ cursor: 'pointer' }} onClick={handleClick}>
+            {options.backgroundColor === '#ffffff' ? (
+              <img
+                style={{ height: '30px', display: 'flex' }}
+                src={emptyColorPlaceholder}
+                alt="color picker"
+              />
+            ) : (
+              <div style={{ background: options.backgroundColor }} className="editor-color-holder" />
+            )}
           </div>
-        ) : null}
+
+          {dropdown.displayColorPicker ? (
+            <div style={popover}>
+              <div style={cover} onClick={handleClose} />
+              <TwitterPicker color={options.backgroundColor} onChange={onColorChange} />
+            </div>
+          ) : null}
+        </div>
+        <VerticalSeparator />
       </div>
-      <VerticalSeparator />
     </div>
   )
 }

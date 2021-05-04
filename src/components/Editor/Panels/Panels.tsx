@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ClosePanel from './ClosePanel'
-import PanelItemsList from './PanelItemsList/PanelItemsList'
+import PanelItemsList from './PanelsList/PanelsList'
 import PanelItem from './PanelItem/PanelItem'
 import './Panels.scss'
 

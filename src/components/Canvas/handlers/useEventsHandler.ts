@@ -46,7 +46,6 @@ function useEventHandlers() {
     ({ target }) => {
       if (target) {
         if (canvas) {
-          console.log(canvas.getActiveObject())
           setActiveObject(canvas.getActiveObject())
         }
       } else {

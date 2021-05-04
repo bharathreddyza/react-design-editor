@@ -1,0 +1,35 @@
+.editor-toolbox.text {
+  height: 54px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(57, 76, 96, 0.15);
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  .section-two {
+    display: flex;
+  }
+}
+
+.list-item {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background: rgba($color: #000000, $alpha: 0.03);
+  }
+}
+
+.font-family-selector {
+  width: 180px;
+  cursor: pointer;
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
+  height: 36px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  justify-content: space-between;
+}

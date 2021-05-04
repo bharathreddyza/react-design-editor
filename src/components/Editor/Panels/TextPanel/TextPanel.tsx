@@ -1,60 +1,46 @@
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
-import { useCanvasContext } from '@/components/Canvas/hooks'
-import { fabric } from 'fabric'
+import { useCoreHandler } from '@/components/Canvas/handlers'
 
 function TextPanel() {
-  const { canvas } = useCanvasContext()
-
+  const { addObject } = useCoreHandler()
   const addHeading = () => {
-    const text = new fabric.Textbox('Add a heading', {
+    const options = {
+      type: 'text',
+      text: 'Add a heading',
       fontSize: 32,
       width: 320,
       fontWeight: 700,
       fontFamily: 'Lexend',
       textAlign: 'center',
-    })
-    //@ts-ignore
-    const workarea = canvas.getObjects().find(obj => obj.id === 'workarea')
-    canvas.add(text)
-    text.center()
-
-    text.clipPath = workarea
-    canvas.renderAll()
+    }
+    addObject(options)
   }
 
   const addSubheading = () => {
-    const text = new fabric.Textbox('Add a subheading', {
+    const options = {
+      type: 'text',
+      text: 'Add a subheading',
       fontSize: 24,
       width: 320,
       fontWeight: 500,
       fontFamily: 'Lexend',
       textAlign: 'center',
-    })
-    //@ts-ignore
-    const workarea = canvas.getObjects().find(obj => obj.id === 'workarea')
-    canvas.add(text)
-    text.center()
-
-    text.clipPath = workarea
-    canvas.renderAll()
+    }
+    addObject(options)
   }
 
   const addTextBody = () => {
-    const text = new fabric.Textbox('Add a little bit of body text', {
+    const options = {
+      type: 'text',
+      text: 'Add a little bit of body text',
       fontSize: 18,
       width: 320,
       fontWeight: 300,
       fontFamily: 'Lexend',
       textAlign: 'center',
-    })
-    //@ts-ignore
-    const workarea = canvas.getObjects().find(obj => obj.id === 'workarea')
-    canvas.add(text)
-    text.center()
-
-    text.clipPath = workarea
-    canvas.renderAll()
+    }
+    addObject(options)
   }
   return (
     <>
