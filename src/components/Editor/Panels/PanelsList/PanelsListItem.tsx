@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import PanelIcons from './PanelIcons'
+import PanelItemIcon from './PanelItemIcon'
 // import "./Item.less"
 
 interface Props {
@@ -27,7 +27,7 @@ function PanelItem(props: Props) {
         setActiveTab(name)
       }}
     >
-      {PanelIcons[icon].render()}
+      {PanelItemIcon[icon].render()}
       <span>{label}</span>
     </div>
   )

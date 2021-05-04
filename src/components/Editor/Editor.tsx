@@ -1,8 +1,8 @@
-import Navbar from '@scenes/Editor/Navbar/Navbar'
-import Panels from '@scenes/Editor/Panels/Panels'
-import FooterMenu from '@scenes/Editor/FooterMenu/FooterMenu'
-import Toolbox from '@scenes/Editor/Toolbox/Toolbox'
-import CanvasArea from '@scenes/Editor/CanvasArea/CanvasArea'
+import Navbar from '@components/Editor/Navbar/Navbar'
+import Panels from '@components/Editor/Panels/Panels'
+import FooterMenu from '@components/Editor/FooterMenu/FooterMenu'
+import Toolbox from '@components/Editor/Toolbox/Toolbox'
+import CanvasArea from '@components/Editor/CanvasArea/CanvasArea'
 import './Editor.scss'
 
 function Editor() {
